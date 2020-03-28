@@ -20,7 +20,11 @@ public class MazeGeneration : MonoBehaviour
         foreach (var plane in planes) {
             GenerateMaze(plane);
             NavMeshSurface navMeshSurface = plane.GetComponent(typeof(NavMeshSurface)) as NavMeshSurface;
-            if (navMeshSurface != null) navMeshSurface.BuildNavMesh(); 
+            if (navMeshSurface != null)
+            {
+                navMeshSurface.BuildNavMesh();
+            }
+                
         }
         
     }
